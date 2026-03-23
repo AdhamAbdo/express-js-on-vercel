@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بيانات برو | Bayanat Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<!-- Link to your external CSS file -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/201119690838" class="wa-float" target="_blank" title="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#home" class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-icon">📊</div>
+    <div class="nav-logo-text">بيانات<span>برو</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" onclick="showPage('home')"><span data-lang="ar">الرئيسية</span><span data-lang="en">Home</span></a></li>
+    <li><a href="#services" onclick="showPage('services')"><span data-lang="ar">الخدمات</span><span data-lang="en">Services</span></a></li>
+    <li><a href="#training" onclick="showPage('training')"><span data-lang="ar">التدريب</span><span data-lang="en">Training</span></a></li>
+    <li><a href="#pricing" onclick="showPage('pricing')"><span data-lang="ar">الأسعار</span><span data-lang="en">Pricing</span></a></li>
+    <li><a href="#contact" onclick="showPage('contact')"><span data-lang="ar">اتصل بنا</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-controls">
+    <button class="nav-btn" onclick="toggleLang()" id="lang-btn">EN</button>
+    <button class="nav-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    <a href="https://wa.me/201119690838" class="nav-cta" target="_blank">
+      <span data-lang="ar">💬 تواصل معنا</span>
+      <span data-lang="en">💬 Contact Us</span>
+    </a>
+  </div>
+  <div class="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" onclick="showPage('home');toggleMobile()"><span data-lang="ar">الرئيسية</span><span data-lang="en">Home</span></a>
+  <a href="#services" onclick="showPage('services');toggleMobile()"><span data-lang="ar">الخدمات</span><span data-lang="en">Services</span></a>
+  <a href="#training" onclick="showPage('training');toggleMobile()"><span data-lang="ar">التدريب</span><span data-lang="en">Training</span></a>
+  <a href="#pricing" onclick="showPage('pricing');toggleMobile()"><span data-lang="ar">الأسعار</span><span data-lang="en">Pricing</span></a>
+  <a href="#contact" onclick="showPage('contact');toggleMobile()"><span data-lang="ar">اتصل بنا</span><span data-lang="en">Contact</span></a>
+</div>
+
+<section id="home">
+  <div class="hero-bg" style="background-image: url('assets/images/bg.png');"></div>
+  
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span data-lang="ar">منصة تحليل البيانات الاحترافية</span>
+      <span data-lang="en">Professional Data Analytics Platform</span>
+    </div>
+
+    <h1>
+      <span data-lang="ar">حوّل <span class="highlight">بياناتك</span> إلى قرارات ذكية</span>
+      <span data-lang="en">Turn Your <span class="highlight">Data</span> Into Smart Decisions</span>
+    </h1>
+
+    <p class="hero-desc">
+      <span data-lang="ar">نحوّل بياناتك إلى قرارات ذكية من خلال خدمات احترافية وتدريبية عملية يقودها خبراء المجال.</span>
+      <span data-lang="en">We transform your data into smart decisions through professional services and practical training.</span>
+    </p>
+
+    <div class="hero-cards">
+      <div class="glass-card">
+        <div class="card-icon">🧪</div>
+        <h3 data-lang="ar">تحليل عميق</h3>
+        <h3 data-lang="en">Deep Analysis</h3>
+        <p data-lang="ar">تحليل عميق لتحليل عبر المعايير</p>
+      </div>
+      
+      <div class="glass-card">
+        <div class="card-icon">🔮</div>
+        <h3 data-lang="ar">نماذج تنبؤية</h3>
+        <h3 data-lang="en">Predictive Models</h3>
+        <p data-lang="ar">نماذج تنبؤية لتحليل التنبؤية والسابقة</p>
+      </div>
+
+      <div class="glass-card">
+        <div class="card-icon">🎓</div>
+        <h3 data-lang="ar">برامج تدريبية</h3>
+        <h3 data-lang="en">Training Programs</h3>
+        <p data-lang="ar">برامج تدريبية لصقل المهارات الإدارية</p>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+       <a href="https://wa.me/201119690838" class="btn-primary" target="_blank">
+        <span data-lang="ar">🚀 ابدأ الآن</span>
+      </a>
+      <button class="btn-secondary" onclick="showPage('services')">
+        <span data-lang="ar">📊 استعرض الخدمات</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item reveal">
+      <div class="check">✓</div>
+      <span data-lang="ar">+100 متدرب</span>
+      <span data-lang="en">+100 Trainees</span>
+    </div>
+    <div class="trust-item reveal reveal-delay-1">
+      <div class="check">✓</div>
+      <span data-lang="ar">خبراء في مجال تحليل البيانات</span>
+      <span data-lang="en">Data Analytics Experts</span>
+    </div>
+    <div class="trust-item reveal reveal-delay-2">
+      <div class="check">✓</div>
+      <span data-lang="ar">مشاريع واقعية</span>
+      <span data-lang="en">Real-World Projects</span>
+    </div>
+    <div class="trust-item reveal reveal-delay-3">
+      <div class="check">✓</div>
+      <span data-lang="ar">دعم مستمر 24/7</span>
+      <span data-lang="en">24/7 Support</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section id="services" style="background:var(--sandstone)">
+  <div class="section-header">
+    <div class="section-tag reveal">
+      <span data-lang="ar">🛠 خدماتنا</span>
+      <span data-lang="en">🛠 Our Services</span>
+    </div>
+    <h2 class="reveal">
+      <span data-lang="ar">خدمات تحليل البيانات الاحترافية</span>
+      <span data-lang="en">Professional Data Analytics Services</span>
+    </h2>
+    <p class="reveal">
+      <span data-lang="ar">نقدم حلولاً متكاملة في تحليل البيانات، وتطوير قواعد البيانات، وتصميم الإنفوجرافيك المبني على البيانات</span>
+      <span data-lang="en">We provide integrated solutions in data analysis, database development, and data-driven infographic design</span>
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- DATA ANALYSIS -->
+    <div class="service-card reveal">
+      <div class="service-cover sc-analysis">
+        <svg class="cover-svg" viewBox="0 0 100 80" fill="none">
+          <rect x="5" y="30" width="14" height="44" rx="3" fill="rgba(42,128,96,0.5)"/>
+          <rect x="24" y="18" width="14" height="56" rx="3" fill="rgba(42,128,96,0.7)"/>
+          <rect x="43" y="40" width="14" height="34" rx="3" fill="rgba(42,128,96,0.4)"/>
+          <rect x="62" y="10" width="14" height="64" rx="3" fill="rgba(42,128,96,0.9)"/>
+          <rect x="81" y="22" width="14" height="52" rx="3" fill="rgba(42,128,96,0.6)"/>
+          <polyline points="12,25 31,13 50,35 69,5 88,17" stroke="#2A8060" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="25" r="3" fill="#2A8060"/>
+          <circle cx="31" cy="13" r="3" fill="#2A8060"/>
+          <circle cx="50" cy="35" r="3" fill="#2A8060"/>
+          <circle cx="69" cy="5" r="3" fill="#2A8060"/>
+          <circle cx="88" cy="17" r="3" fill="#2A8060"/>
+        </svg>
+      </div>
+      <span class="service-badge badge-green" data-lang="ar">تحليل البيانات</span>
+      <span class="service-badge badge-green" data-lang="en">Data Analysis</span>
+      <h3>
+        <span data-lang="ar">خدمات تحليل البيانات</span>
+        <span data-lang="en">Data Analysis Services</span>
+      </h3>
+      <p>
+        <span data-lang="ar">تحليل احترافي باستخدام أحدث الأدوات لاستخراج رؤى قابلة للتنفيذ من بياناتك</span>
+        <span data-lang="en">Professional analysis using the latest tools to extract actionable insights from your data</span>
+      </p>
+      <div class="service-tools">
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">Tableau</span>
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">Looker</span>
+        <span class="tool-tag">SPSS</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">SSAS</span>
+      </div>
+      <a href="https://wa.me/201119690838" class="btn-request" target="_blank">
+        <span data-lang="ar">اطلب الخدمة</span>
+        <span data-lang="en">Request Service</span>
+        <span>←</span>
+      </a>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-cover sc-database">
+        <svg class="cover-svg" viewBox="0 0 100 80" fill="none">
+          <ellipse cx="50" cy="18" rx="35" ry="10" fill="rgba(15,30,61,0.15)" stroke="rgba(42,128,96,0.6)" stroke-width="1.5"/>
+          <path d="M15 18 L15 44 Q15 54 50 54 Q85 54 85 44 L85 18" fill="rgba(15,30,61,0.06)" stroke="rgba(42,128,96,0.5)" stroke-width="1.5"/>
+          <ellipse cx="50" cy="44" rx="35" ry="10" fill="rgba(42,128,96,0.12)" stroke="rgba(42,128,96,0.5)" stroke-width="1.5"/>
+          <path d="M15 30 L15 58 Q15 68 50 68 Q85 68 85 58 L85 30" fill="rgba(15,30,61,0.04)" stroke="rgba(42,128,96,0.35)" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <ellipse cx="50" cy="58" rx="35" ry="10" fill="rgba(42,128,96,0.08)" stroke="rgba(42,128,96,0.35)" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <line x1="50" y1="8" x2="50" y2="18" stroke="rgba(42,128,96,0.8)" stroke-width="2"/>
+          <circle cx="50" cy="6" r="4" fill="rgba(42,128,96,0.8)"/>
+        </svg>
+      </div>
+      <span class="service-badge badge-blue" data-lang="ar">قواعد البيانات</span>
+      <span class="service-badge badge-blue" data-lang="en">Databases</span>
+      <h3>
+        <span data-lang="ar">تطوير قواعد البيانات</span>
+        <span data-lang="en">Database Development</span>
+      </h3>
+      <p>
+        <span data-lang="ar">تصميم وتطوير قواعد بيانات منظمة وفعالة تلبي احتياجات عملك بدقة</span>
+        <span data-lang="en">Design and develop structured, efficient databases that precisely meet your business needs</span>
+      </p>
+      <div class="service-tools">
+        <span class="tool-tag">SQL Server</span>
+        <span class="tool-tag">MySQL</span>
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">MS Access</span>
+      </div>
+      <a href="https://wa.me/201119690838" class="btn-request" target="_blank">
+        <span data-lang="ar">اطلب الخدمة</span>
+        <span data-lang="en">Request Service</span>
+        <span>←</span>
+      </a>
+    </div>
+
+    <!-- DATA VISUALIZATION -->
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-cover sc-viz">
+        <svg class="cover-svg" viewBox="0 0 100 80" fill="none">
+          <circle cx="35" cy="38" r="25" fill="none" stroke="rgba(42,128,96,0.3)" stroke-width="1.5"/>
+          <path d="M35 13 A25 25 0 0 1 60 38" fill="rgba(42,128,96,0.5)" stroke="rgba(42,128,96,0.7)" stroke-width="1"/>
+          <path d="M60 38 A25 25 0 0 1 35 63" fill="rgba(232,186,72,0.4)" stroke="rgba(200,160,50,0.6)" stroke-width="1"/>
+          <path d="M35 63 A25 25 0 0 1 10 38" fill="rgba(15,30,61,0.2)" stroke="rgba(15,30,61,0.4)" stroke-width="1"/>
+          <path d="M10 38 A25 25 0 0 1 35 13" fill="rgba(100,60,180,0.2)" stroke="rgba(100,60,180,0.4)" stroke-width="1"/>
+          <rect x="65" y="15" width="28" height="6" rx="3" fill="rgba(42,128,96,0.6)"/>
+          <rect x="65" y="26" width="20" height="6" rx="3" fill="rgba(232,186,72,0.6)"/>
+          <rect x="65" y="37" width="23" height="6" rx="3" fill="rgba(15,30,61,0.3)"/>
+          <rect x="65" y="48" width="16" height="6" rx="3" fill="rgba(100,60,180,0.4)"/>
+          <circle cx="62" cy="18" r="3" fill="rgba(42,128,96,0.7)"/>
+          <circle cx="62" cy="29" r="3" fill="rgba(232,186,72,0.7)"/>
+          <circle cx="62" cy="40" r="3" fill="rgba(15,30,61,0.5)"/>
+          <circle cx="62" cy="51" r="3" fill="rgba(100,60,180,0.6)"/>
+        </svg>
+      </div>
+      <span class="service-badge badge-amber" data-lang="ar">تصميم بياني</span>
+      <span class="service-badge badge-amber" data-lang="en">Visual Design</span>
+      <h3>
+        <span data-lang="ar">تصميم الإنفوجرافيك</span>
+        <span data-lang="en">Data Visualization & Infographics</span>
+      </h3>
+      <p>
+        <span data-lang="ar">تحويل البيانات المعقدة إلى تصاميم بصرية احترافية وجذابة تسهل الفهم والتواصل</span>
+        <span data-lang="en">Converting complex data into professional, compelling visual designs that simplify understanding</span>
+      </p>
+      <div class="service-tools">
+        <span class="tool-tag">PowerPoint</span>
+        <span class="tool-tag">Illustrator</span>
+        <span class="tool-tag">Infographics</span>
+      </div>
+      <a href="https://wa.me/201119690838" class="btn-request" target="_blank">
+        <span data-lang="ar">اطلب الخدمة</span>
+        <span data-lang="en">Request Service</span>
+        <span>←</span>
+      </a>
+    </div>
+
+    <!-- FUTURE SERVICES -->
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-cover sc-future">
+        <svg class="cover-svg" viewBox="0 0 100 80" fill="none">
+          <circle cx="50" cy="40" r="20" fill="none" stroke="rgba(100,60,180,0.3)" stroke-width="1.5"/>
+          <circle cx="50" cy="40" r="12" fill="rgba(100,60,180,0.1)" stroke="rgba(100,60,180,0.4)" stroke-width="1.5"/>
+          <circle cx="50" cy="40" r="5" fill="rgba(42,128,96,0.7)"/>
+          <line x1="50" y1="5" x2="50" y2="15" stroke="rgba(100,60,180,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="50" y1="65" x2="50" y2="75" stroke="rgba(100,60,180,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="10" y1="40" x2="22" y2="40" stroke="rgba(100,60,180,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="78" y1="40" x2="90" y2="40" stroke="rgba(100,60,180,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="21" y1="11" x2="29" y2="19" stroke="rgba(42,128,96,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="71" y1="61" x2="79" y2="69" stroke="rgba(42,128,96,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="79" y1="11" x2="71" y2="19" stroke="rgba(42,128,96,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="29" y1="61" x2="21" y2="69" stroke="rgba(42,128,96,0.4)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="service-badge badge-purple" data-lang="ar">✨ قريباً</span>
+      <span class="service-badge badge-purple" data-lang="en">✨ Coming Soon</span>
+      <h3>
+        <span data-lang="ar">الأتمتة وتطبيقات Power Apps</span>
+        <span data-lang="en">Automation & Power Apps</span>
+      </h3>
+      <p>
+        <span data-lang="ar">دمج التحليل مع الأتمتة لزيادة الكفاءة وتقليل الجهد البشري في العمليات المتكررة</span>
+        <span data-lang="en">Integrate analytics with automation to increase efficiency and reduce manual effort in repetitive processes</span>
+      </p>
+      <div class="service-tools">
+        <span class="tool-tag">Power Automate</span>
+        <span class="tool-tag">Power Apps</span>
+        <span class="tool-tag">Python</span>
+      </div>
+      <button class="btn-request" style="opacity:0.7;cursor:default;">
+        <span data-lang="ar">🔔 سجل للإشعار</span>
+        <span data-lang="en">🔔 Notify Me</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ TRAINING ═══════════════════ -->
+<section id="training">
+  <div class="section-header">
+    <div class="section-tag reveal">
+      <span data-lang="ar">🎓 برامجنا التدريبية</span>
+      <span data-lang="en">🎓 Training Programs</span>
+    </div>
+    <h2 class="reveal">
+      <span data-lang="ar">تدريب عملي بإشراف خبراء</span>
+      <span data-lang="en">Hands-On Training by Experts</span>
+    </h2>
+    <p class="reveal">
+      <span data-lang="ar">برامج تدريبية مصممة لتحويل المعرفة النظرية إلى مهارات عملية فعلية في سوق العمل</span>
+      <span data-lang="en">Training programs designed to transform theoretical knowledge into real practical skills for the job market</span>
+    </p>
+  </div>
+
+  <div class="training-grid">
+
+    <!-- GROUP -->
+    <div class="training-card reveal">
+      <div class="t-icon">👥</div>
+      <h3 data-lang="ar">التدريب الجماعي</h3>
+      <h3 data-lang="en">Group Training</h3>
+      <div class="t-subtitle" data-lang="ar">للأفراد والمجموعات</div>
+      <div class="t-subtitle" data-lang="en">For Individuals & Groups</div>
+      <div class="t-meta">
+        <div class="t-meta-item"><span class="t-meta-icon">📅</span>
+          <span data-lang="ar"><strong>المدة:</strong> أسبوعان (12 ساعة)</span>
+          <span data-lang="en"><strong>Duration:</strong> 2 Weeks (12 hrs)</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">🗓</span>
+          <span data-lang="ar"><strong>الجدول:</strong> 3 أيام / أسبوع · ساعتان / يوم</span>
+          <span data-lang="en"><strong>Schedule:</strong> 3 days/week · 2hrs/day</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">👨‍👩‍👧‍👦</span>
+          <span data-lang="ar"><strong>الحد الأقصى:</strong> 50 متدرب</span>
+          <span data-lang="en"><strong>Max:</strong> 50 trainees</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">💰</span>
+          <span data-lang="ar"><strong>السعر:</strong> <span style="color:var(--zellige);font-weight:800">700 ريال</span></span>
+          <span data-lang="en"><strong>Price:</strong> <span style="color:var(--zellige);font-weight:800">SAR 700</span></span>
+        </div>
+      </div>
+      <ul class="t-features">
+        <li data-lang="ar">دعم مستمر على مدار 24/7</li>
+        <li data-lang="en">24/7 Continuous Support</li>
+        <li data-lang="ar">واجبات وتقييمات تدريبية</li>
+        <li data-lang="en">Assignments & Assessments</li>
+        <li data-lang="ar">شهادة إتمام معتمدة</li>
+        <li data-lang="en">Certified Completion Certificate</li>
+      </ul>
+      <a href="https://wa.me/201119690838" class="btn-book btn-book-outline" target="_blank">
+        <span data-lang="ar">📩 احجز مقعدك</span>
+        <span data-lang="en">📩 Book Your Seat</span>
+      </a>
+    </div>
+
+    <!-- INDIVIDUAL -->
+    <div class="training-card featured reveal reveal-delay-1">
+      <div class="badge-featured" data-lang="ar">الأكثر طلباً</div>
+      <div class="badge-featured" data-lang="en">Most Popular</div>
+      <div class="t-icon">🎯</div>
+      <h3 data-lang="ar">التدريب الفردي</h3>
+      <h3 data-lang="en">Individual Training</h3>
+      <div class="t-subtitle" data-lang="ar">جلسات شخصية مخصصة</div>
+      <div class="t-subtitle" data-lang="en">Personalized One-on-One Sessions</div>
+      <div class="t-meta">
+        <div class="t-meta-item"><span class="t-meta-icon">📅</span>
+          <span data-lang="ar"><strong>المدة:</strong> أسبوعان (12 ساعة)</span>
+          <span data-lang="en"><strong>Duration:</strong> 2 Weeks (12 hrs)</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">🗓</span>
+          <span data-lang="ar"><strong>الجدول:</strong> مرن حسب وقتك</span>
+          <span data-lang="en"><strong>Schedule:</strong> Flexible to your schedule</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">🧑‍💻</span>
+          <span data-lang="ar"><strong>النوع:</strong> فردي 1-على-1</span>
+          <span data-lang="en"><strong>Type:</strong> 1-on-1 Personal</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">💰</span>
+          <span data-lang="ar"><strong>السعر:</strong> <span style="color:var(--zellige);font-weight:800">2000 ريال</span></span>
+          <span data-lang="en"><strong>Price:</strong> <span style="color:var(--zellige);font-weight:800">SAR 2,000</span></span>
+        </div>
+      </div>
+      <ul class="t-features">
+        <li data-lang="ar">دعم مستمر على مدار 24/7</li>
+        <li data-lang="en">24/7 Continuous Support</li>
+        <li data-lang="ar">خطة تدريبية مخصصة لك</li>
+        <li data-lang="en">Customized Training Plan</li>
+        <li data-lang="ar">شهادة إتمام معتمدة</li>
+        <li data-lang="en">Certified Completion Certificate</li>
+      </ul>
+      <a href="https://wa.me/201119690838" class="btn-book btn-book-primary" target="_blank">
+        <span data-lang="ar">🚀 ابدأ تدريبك الآن</span>
+        <span data-lang="en">🚀 Start Training Now</span>
+      </a>
+    </div>
+
+    <!-- CORPORATE -->
+    <div class="training-card reveal reveal-delay-2">
+      <div class="t-icon">🏢</div>
+      <h3 data-lang="ar">حلول الشركات</h3>
+      <h3 data-lang="en">Corporate Solutions</h3>
+      <div class="t-subtitle" data-lang="ar">مصمم لاحتياجات مؤسستك</div>
+      <div class="t-subtitle" data-lang="en">Tailored for Your Organization</div>
+      <div class="t-meta">
+        <div class="t-meta-item"><span class="t-meta-icon">📅</span>
+          <span data-lang="ar"><strong>المدة:</strong> شهر كامل</span>
+          <span data-lang="en"><strong>Duration:</strong> 1 Full Month</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">👨‍👩‍👧‍👦</span>
+          <span data-lang="ar"><strong>الحد الأقصى:</strong> 100 موظف</span>
+          <span data-lang="en"><strong>Max:</strong> 100 Employees</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">⭐</span>
+          <span data-lang="ar"><strong>إضافي:</strong> دعم ممتد 3 سنوات (مدفوع)</span>
+          <span data-lang="en"><strong>Add-on:</strong> 3-Year Extended Support</span>
+        </div>
+        <div class="t-meta-item"><span class="t-meta-icon">💰</span>
+          <span data-lang="ar"><strong>يبدأ من:</strong> <span style="color:var(--zellige);font-weight:800">10,000 ريال</span></span>
+          <span data-lang="en"><strong>Starting:</strong> <span style="color:var(--zellige);font-weight:800">SAR 10,000</span></span>
+        </div>
+      </div>
+      <ul class="t-features">
+        <li data-lang="ar">دراسة احتياجات عملك</li>
+        <li data-lang="en">Business Needs Assessment</li>
+        <li data-lang="ar">خطة تدريبية مخصصة بالكامل</li>
+        <li data-lang="en">Fully Customized Training Plan</li>
+        <li data-lang="ar">شهادات للجميع + دعم ما بعد التدريب</li>
+        <li data-lang="en">Certificates + Post-Training Support</li>
+      </ul>
+      <a href="https://wa.me/201119690838" class="btn-book btn-book-outline" target="_blank">
+        <span data-lang="ar">📋 اطلب عرضاً تفصيلياً</span>
+        <span data-lang="en">📋 Request a Proposal</span>
+      </a>
+    </div>
+
+    <!-- PORTFOLIO BUILDER -->
+    <div class="coming-card reveal reveal-delay-3">
+      <span class="coming-icon">🚀</span>
+      <h3 data-lang="ar">برنامج بناء المسيرة المهنية</h3>
+      <h3 data-lang="en">Portfolio Builder Program</h3>
+      <p data-lang="ar">برنامج شامل لبناء مسيرتك في عالم تحليل البيانات من الصفر حتى الحصول على وظيفة</p>
+      <p data-lang="en">A comprehensive program to build your data analytics career from scratch to landing a job</p>
+      <div class="project-tags">
+        <span class="proj-tag" data-lang="ar">5 مشاريع حقيقية</span>
+        <span class="proj-tag" data-lang="en">5 Real Projects</span>
+        <span class="proj-tag" data-lang="ar">إعداد السيرة الذاتية</span>
+        <span class="proj-tag" data-lang="en">CV Preparation</span>
+        <span class="proj-tag" data-lang="ar">LinkedIn احترافي</span>
+        <span class="proj-tag" data-lang="en">LinkedIn Profile</span>
+        <span class="proj-tag" data-lang="ar">تحضير المقابلات</span>
+        <span class="proj-tag" data-lang="en">Interview Prep</span>
+        <span class="proj-tag" data-lang="ar">دعم حتى التوظيف</span>
+        <span class="proj-tag" data-lang="en">Support Until Hired</span>
+      </div>
+      <a href="https://wa.me/201119690838" class="btn-waitlist" target="_blank">
+        <span data-lang="ar">🔔 انضم لقائمة الانتظار</span>
+        <span data-lang="en">🔔 Join Waitlist</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════ WHY US (FINAL 4 CARDS) ═══════════════════ -->
+<section id="why" style="background:var(--sandstone)">
+  <div class="section-header">
+    <div class="section-tag reveal">
+      <span data-lang="ar">💡 لماذا بيانات برو</span>
+      <span data-lang="en">💡 Why Bayanat Pro</span>
+    </div>
+    <h2 class="reveal">
+      <span data-lang="ar">منهجية احترافية تضمن تفوقك</span>
+      <span data-lang="en">A Professional Framework for Your Success</span>
+    </h2>
+  </div>
+
+  <div class="why-grid">
+    <!-- CARD 1: Personalized Paths -->
+    <div class="why-card reveal">
+      <div class="why-icon">🎯</div>
+      <h3 data-lang="ar">مسارات تدريبية مُخصصة</h3>
+      <h3 data-lang="en">Personalized Learning Paths</h3>
+      <p data-lang="ar">نصمم برنامجك التدريبي بناءً على مستواك المهني (مبتدئ، متوسط، أو خبير) لضمان سد الفجوات المهارية وتحقيق أهدافك بدقة.</p>
+      <p data-lang="en">We tailor your training based on your professional level (Beginner to Expert) to bridge skill gaps and achieve your goals.</p>
+    </div>
+
+    <!-- CARD 2: Real Projects -->
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">💼</div>
+      <h3 data-lang="ar">محاكاة واقعية لسوق العمل</h3>
+      <h3 data-lang="en">Market-Ready Simulations</h3>
+      <p data-lang="ar">تطبيق عملي مكثف على سيناريوهات حقيقية تمنحك الجاهزية الكاملة لاقتناص فرص العمل أو البدء في العمل الحر فوراً.</p>
+      <p data-lang="en">Intensive practical application on real-world scenarios, giving you the readiness to secure jobs or freelance immediately.</p>
+    </div>
+
+    <!-- CARD 3: Professional Trainers -->
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">🧠</div>
+      <h3 data-lang="ar">خبراء ميدانيون لا أكاديميون</h3>
+      <h3 data-lang="en">Industry Practitioners</h3>
+      <p data-lang="ar">تتلقى تدريبك على يد خبراء مارسوا تحليل البيانات في كبرى الشركات؛ لننقل لك أسرار المهنة وتحديات السوق الفعلية.</p>
+      <p data-lang="en">Learn from experts who have managed data in top firms, gaining insider industry secrets and actual market insights.</p>
+    </div>
+
+    <!-- CARD 4: Results Oriented -->
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon">📈</div>
+      <h3 data-lang="ar">تركيز على القيمة والنتائج</h3>
+      <h3 data-lang="en">Value & Result Driven</h3>
+      <p data-lang="ar">تجاوز مرحلة تعلم الأدوات (Power BI, Python) إلى مرحلة استخراج رؤى تحليلية تساهم في اتخاذ قرارات استراتيجية فعالة.</p>
+      <p data-lang="en">Move beyond just learning tools to mastering the art of deriving insights that drive effective strategic decisions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ OUR WORK ═══════════════════ -->
+<section id="work">
+  <div class="section-header">
+    <div class="section-tag reveal">
+      <span data-lang="ar">📊 أعمالنا</span>
+      <span data-lang="en">📊 Our Work</span>
+    </div>
+
+    <h2 class="reveal">
+      <span data-lang="ar">نماذج من مشاريعنا وتحليلاتنا</span>
+      <span data-lang="en">Real Projects & Data Solutions</span>
+    </h2>
+
+    <p class="reveal">
+      <span data-lang="ar">استكشف كيف نحول البيانات إلى قرارات من خلال لوحات تحكم وتقارير احترافية</span>
+      <span data-lang="en">Explore how we turn data into insights through dashboards, reports, and models</span>
+    </p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="proj-card reveal">
+      <div class="proj-img">
+        <img src="assets/images/army project.png" alt="Sales Dashboard" loading="lazy">
+        <div class="proj-img-overlay">
+          <button class="overlay-cta">
+            <span data-lang="ar">عرض تفاصيل المشروع &larr;</span>
+            <span data-lang="en">View Case Study &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="proj-tag">Power BI</span>
+          <span class="proj-tag">DAX</span>
+          <span class="proj-tag">SQL</span>
+        </div>
+
+        <div class="proj-title">
+          <span data-lang="ar">تحليل المبيعات والأرباح</span>
+          <span data-lang="en">Sales & Profit Dashboard</span>
+        </div>
+
+        <div class="proj-desc">
+          <span data-lang="ar">تحليل شامل للمبيعات مع مقارنة سنوية وتحديد أكثر المنتجات ربحية</span>
+          <span data-lang="en">Full sales analysis with YoY comparison and top-performing products</span>
+        </div>
+      </div>
+
+      <div class="proj-foot">
+        <span class="proj-industry">
+          <span data-lang="ar">تجارة</span>
+          <span data-lang="en">Retail</span>
+        </span>
+        <button class="proj-arrow">&#8599;</button>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="proj-card reveal reveal-delay-1">
+      <div class="proj-img">
+        <img src="assets/images/HR.png" alt="HR Dashboard" loading="lazy">
+        <div class="proj-img-overlay">
+          <button class="overlay-cta">
+            <span data-lang="ar">عرض تفاصيل المشروع &larr;</span>
+            <span data-lang="en">View Case Study &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="proj-tag">Power BI</span>
+          <span class="proj-tag">HR Analytics</span>
+        </div>
+
+        <div class="proj-title">
+          <span data-lang="ar">تحليل الموارد البشرية</span>
+          <span data-lang="en">HR Analytics Dashboard</span>
+        </div>
+
+        <div class="proj-desc">
+          <span data-lang="ar">تحليل معدل الدوران والغياب وأداء الموظفين</span>
+          <span data-lang="en">Employee turnover, attendance, and performance insights</span>
+        </div>
+      </div>
+
+      <div class="proj-foot">
+        <span class="proj-industry">
+          <span data-lang="ar">موارد بشرية</span>
+          <span data-lang="en">Human Resources</span>
+        </span>
+        <button class="proj-arrow">&#8599;</button>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="proj-card reveal reveal-delay-2">
+      <div class="proj-img">
+        <img src="assets/images/Trennies.png" alt="Data Model" loading="lazy">
+        <div class="proj-img-overlay">
+          <button class="overlay-cta">
+            <span data-lang="ar">عرض تفاصيل المشروع &larr;</span>
+            <span data-lang="en">View Case Study &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">Data Modeling</span>
+        </div>
+
+        <div class="proj-title">
+          <span data-lang="ar">تصميم نموذج بيانات</span>
+          <span data-lang="en">Data Model Design</span>
+        </div>
+
+        <div class="proj-desc">
+          <span data-lang="ar">بناء نموذج بيانات احترافي لتحسين الأداء وسرعة التقارير</span>
+          <span data-lang="en">Optimized data model for performance and scalable reporting</span>
+        </div>
+      </div>
+
+      <div class="proj-foot">
+        <span class="proj-industry">
+          <span data-lang="ar">تحليل بيانات</span>
+          <span data-lang="en">Data Engineering</span>
+        </span>
+        <button class="proj-arrow">&#8599;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:50px;" class="reveal">
+    <a href="https://wa.me/201119690838" class="btn-primary" target="_blank">
+      <span data-lang="ar">📩 اطلب مشروع مشابه</span>
+      <span data-lang="en">📩 Request Similar Project</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section id="contact" style="background:var(--sandstone)">
+  <div class="section-header">
+    <div class="section-tag reveal">
+      <span data-lang="ar">📞 تواصل معنا</span>
+      <span data-lang="en">📞 Get In Touch</span>
+    </div>
+    <h2 class="reveal">
+      <span data-lang="ar">نحن هنا لمساعدتك</span>
+      <span data-lang="en">We're Here to Help</span>
+    </h2>
+    <p class="reveal">
+      <span data-lang="ar">تواصل معنا الآن لمناقشة احتياجاتك والحصول على عرض مخصص</span>
+      <span data-lang="en">Reach out now to discuss your needs and get a personalized offer</span>
+    </p>
+  </div>
+
+  <div class="contact-wrapper">
+    <div class="contact-info reveal">
+      <h3 data-lang="ar">وسائل التواصل المباشرة</h3>
+      <h3 data-lang="en">Direct Contact Methods</h3>
+      <p data-lang="ar">أسرع طريقة للتواصل معنا هي عبر واتساب</p>
+      <p data-lang="en">The fastest way to reach us is via WhatsApp</p>
+
+      <a href="https://wa.me/201119690838" class="contact-btn whatsapp" target="_blank">
+        <div class="cb-icon">
+          <svg viewBox="0 0 24 24" fill="#25d366" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div>
+          <div class="cb-label" data-lang="ar">واتساب</div>
+          <div class="cb-label" data-lang="en">WhatsApp</div>
+          <div class="cb-value">+20 111 969 0838</div>
+        </div>
+      </a>
+
+      <a href="mailto:bayyanatpro@outlook.com" class="contact-btn email">
+        <div class="cb-icon">📧</div>
+        <div>
+          <div class="cb-label" data-lang="ar">البريد الإلكتروني</div>
+          <div class="cb-label" data-lang="en">Email</div>
+          <div class="cb-value">bayyanatpro@outlook.com</div>
+        </div>
+      </a>
+
+      <a href="https://bayanatpro.com" class="contact-btn website" target="_blank">
+        <div class="cb-icon">🌐</div>
+        <div>
+          <div class="cb-label" data-lang="ar">الموقع الإلكتروني</div>
+          <div class="cb-label" data-lang="en">Website</div>
+          <div class="cb-value">bayanatpro.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="contact-form reveal reveal-delay-1">
+      <h3 data-lang="ar">أرسل رسالة</h3>
+      <h3 data-lang="en">Send a Message</h3>
+      <div class="form-group">
+        <label data-lang="ar">الاسم</label>
+        <label data-lang="en">Name</label>
+        <input type="text" id="f-name" placeholder="">
+      </div>
+      <div class="form-group">
+        <label data-lang="ar">البريد الإلكتروني</label>
+        <label data-lang="en">Email</label>
+        <input type="email" id="f-email" placeholder="">
+      </div>
+      <div class="form-group">
+        <label data-lang="ar">نوع الخدمة</label>
+        <label data-lang="en">Service Type</label>
+        <select id="f-service">
+          <option value="" data-lang="ar">اختر الخدمة...</option>
+          <option value="" data-lang="en">Select service...</option>
+          <option data-lang="ar">تحليل البيانات</option>
+          <option data-lang="en">Data Analysis</option>
+          <option data-lang="ar">قواعد البيانات</option>
+          <option data-lang="en">Database Services</option>
+          <option data-lang="ar">إنفوجرافيك</option>
+          <option data-lang="en">Infographics</option>
+          <option data-lang="ar">تدريب فردي</option>
+          <option data-lang="en">Individual Training</option>
+          <option data-lang="ar">تدريب جماعي</option>
+          <option data-lang="en">Group Training</option>
+          <option data-lang="ar">حلول الشركات</option>
+          <option data-lang="en">Corporate Solutions</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label data-lang="ar">رسالتك</label>
+        <label data-lang="en">Your Message</label>
+        <textarea id="f-msg" placeholder=""></textarea>
+      </div>
+      <button class="btn-send" onclick="sendViaWhatsApp()">
+        <span data-lang="ar">🚀 إرسال عبر واتساب</span>
+        <span data-lang="en">🚀 Send via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo" onclick="showPage('home')">
+        <div class="nav-logo-icon">📊</div>
+        <div class="nav-logo-text" style="color:#fff">بيانات<span>برو</span></div>
+      </a>
+      <p data-lang="ar">منصة احترافية لخدمات وتدريب تحليل البيانات في السوق السعودي والعربي</p>
+      <p data-lang="en">A professional platform for data analytics services and training in the Saudi and Arab markets</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-lang="ar">روابط سريعة</h4>
+      <h4 data-lang="en">Quick Links</h4>
+      <ul>
+        <li><a href="#home" onclick="showPage('home')" data-lang="ar">الرئيسية</a><a href="#home" onclick="showPage('home')" data-lang="en">Home</a></li>
+        <li><a href="#services" onclick="showPage('services')" data-lang="ar">الخدمات</a><a href="#services" onclick="showPage('services')" data-lang="en">Services</a></li>
+        <li><a href="#training" onclick="showPage('training')" data-lang="ar">التدريب</a><a href="#training" onclick="showPage('training')" data-lang="en">Training</a></li>
+        <li><a href="#pricing" onclick="showPage('pricing')" data-lang="ar">الأسعار</a><a href="#pricing" onclick="showPage('pricing')" data-lang="en">Pricing</a></li>
+        <li><a href="#contact" onclick="showPage('contact')" data-lang="ar">اتصل بنا</a><a href="#contact" onclick="showPage('contact')" data-lang="en">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-lang="ar">التواصل</h4>
+      <h4 data-lang="en">Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/201119690838" target="_blank">WhatsApp: +201119690838</a></li>
+        <li><a href="mailto:bayyanatpro@outlook.com">bayyanatpro@outlook.com</a></li>
+        <li><a href="https://bayanatpro.com" target="_blank">bayanatpro.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-lang="ar">© 2025 بيانات برو. جميع الحقوق محفوظة.</p>
+    <p data-lang="en">© 2025 Bayanat Pro. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://wa.me/201119690838" class="social-link" target="_blank" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Link to your external JS file -->
+<script src="script.js"></script>
+</body>
+</html>
